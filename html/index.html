@@ -5,55 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Black Theme Webpage</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #1e90ff;
-            background-color: #000;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-        }
-        h1 {
-            margin: 0;
-        }
-        .container {
-            padding: 20px;
-        }
-        a {
-            color: #1e90ff;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
-            background-color: #333;
-            padding: 10px;
-            text-align: center;
-            position: absolute;
-            bottom: 0;
-            width: 100%;
-        }
+        * {
+          box-sizing: border-box;
+          }
+          
+          body {
+              font-family: Arial;
+              margin: 0;
+          }
+          
+          .header {
+              padding: 80px;
+              text-align: center;
+              background: #1abc9c;
+              color: white;
+          }
+          
+          .header h1 {
+              font-size: 40px;
+          }
+          
+          .navbar {
+              overflow: hidden;
+              background-color: #333;
+          }
+          
+          .navbar a {
+              float: left;
+              display: block;
+              color: white;
+              text-align: center;
+              padding: 14px 20px;
+              text-decoration: none;
+          }
+          
+          .navbar a.right {
+              float: right;
+          }
+          
+          .navbar a:hover {
+              background-color: #ddd;
+              color: black;
+          }
+          
+          .row {  
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          }
+          
+          .side {
+              -ms-flex: 30%;
+              flex: 30%;
+              background-color: #f1f1f1;
+              padding: 20px;
+          }
+          
+          .main {   
+              -ms-flex: 70%;
+              flex: 70%;
+              background-color: white;
+              padding: 20px;
+          }
+
+          .fakeimg {
+              background-color: #aaa;
+              width: 100%;
+              padding: 20px;
+          }
+          
+          .footer {
+              padding: 20px;
+              text-align: center;
+              background: #ddd;
+          }
+          
+          @media screen and (max-width: 700px) {
+              .row {   
+                  flex-direction: column;
+              }
+          }
+          
+          @media screen and (max-width: 400px) {
+              .navbar a {
+                  float: none;
+                  width: 100%;
+              }
+          }
     </style>
 </head>
 <body>
     <header>
         <h1>Welcome to My Black Themed Website</h1>
     </header>
-    <div class="container">
-        <p>This is a simple webpage with a black theme. Here are some useful links:</p>
-        <ul>
-            <li><a href="https://github.com" target="_blank">GitHub</a></li>
-            <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
-            <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
-        </ul>
+    <div class="header">
+      <h1>菜鸟教程网页测试实例</h1>
+      <p>创建一个页面。</p>
+    </div>
+     
+    <div class="navbar">
+      <a href="#">链接</a>
+      <a href="#">链接</a>
+      <a href="#">链接</a>
+      <a href="#" class="right">链接</a>
+    </div>
+     
+    <div class="row">
+      <div class="side">
+          <h2>关于我</h2>
+          <h5>我的照片:</h5>
+          <div class="fakeimg" style="height:200px;">这边插入图像</div>
+          <p>关于我的介绍..</p>
+          <h3>更多内容</h3>
+          <p>我的更多内容</p>
+          <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+          <div class="fakeimg" style="height:60px;">这边插入图像</div><br>
+          <div class="fakeimg" style="height:60px;">这边插入图像</div>
+      </div>
+      <div class="main">
+          <h2>标题</h2>
+          <h5>副标题</h5>
+          <div class="fakeimg" style="height:200px;">图像</div>
+          <p>一些文本..</p>
+          <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+          <br>
+          <h2>标题</h2>
+          <h5>副标题</h5>
+          <div class="fakeimg" style="height:200px;">图像</div>
+          <p>一些文本..</p>
+          <p>菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！菜鸟教程，学的不仅是技术，更是梦想！！！</p>
+      </div>
+    </div>
+     
+    <div class="footer">
+      <h2>Sometext</h2>
     </div>
     <footer>
-        <p>© 2024 My Website</p>
+        <p>copyright @ pupubot</p>
     </footer>
 </body>
 </html>
